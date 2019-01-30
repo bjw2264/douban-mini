@@ -1,0 +1,20 @@
+<view class='temp-pics-wrapper'>
+  <view class='pics-wrapper'>
+    <view class='left'>
+      <image class='cover-image' src='{{ data.target.cover_url }}'></image>
+    </view>
+    <view class='right'>
+      <view class='top'>
+        <image class='top-image' src='{{ data.target.more_pic_urls[0] }}'></image>
+      </view>
+      <view class='bottom'>
+        <view class='num-wrapper'>
+          <text class='num'>{{ data.target.photos_count - 3 }}+</text>
+        </view>
+        <image class='bottom-image' src='{{ data.target.more_pic_urls[1] }}'></image>
+      </view>
+    </view>
+  </view>
+  <view class='title'>{{ data.title }}</view>
+  <view class='author'>by {{ data.target.author.name }} {{ data._date }}</view>
+</view>

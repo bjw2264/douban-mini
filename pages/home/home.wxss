@@ -1,0 +1,17 @@
+.home-wrapper {
+  padding: 0 18px;
+}
+.home-wrapper > .item {
+  position: relative;
+}
+.home-wrapper > .item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0;
+  background-color: #e3e3e3;
+  transform: scaleY(0.5);
+  transform-origin: 0 bottom;
+}

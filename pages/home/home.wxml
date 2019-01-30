@@ -1,0 +1,6 @@
+<view class='home-wrapper'>
+  <view class='{{ index !== 0 ? "item" : "" }}' wx:for='{{ dataList }}' wx:key="{{ index }}">
+    <temp-text wx:if="{{ item.layout === 1 }}" data="{{ item }}" />
+    <temp-pics wx:if="{{ item.layout === 5 }}" data="{{ item }}" />
+  </view>
+</view>

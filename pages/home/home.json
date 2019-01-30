@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "temp-text": "/components/tempText/index",
+    "temp-pics": "/components/tempPics/index"
+  }
+}

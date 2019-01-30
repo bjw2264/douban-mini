@@ -1,0 +1,12 @@
+<view class='template-text-wrapper'>
+  <view class='top'>
+    <view class='inner-left'>
+      <view class='inner-top'>{{ data.title }}</view>
+      <view class='inner-bottom'>{{ data.target.desc }}</view>
+    </view>
+    <view class='inner-right' wx:if="{{ data.target.cover_url }}">
+      <image src='{{ data.target.cover_url }}' mode='widthFix' class='cover-image'></image>
+    </view>
+  </view>
+  <view class='bottom'>by {{ data.target.author.name }} {{ data._date }}</view>
+</view>

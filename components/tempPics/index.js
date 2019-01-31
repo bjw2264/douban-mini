@@ -21,7 +21,11 @@ Component({
    */
   methods: {
     goTo: function(e) {
-      navTo('/pages/article/article?id=', e, 'id')
+      // navTo('/pages/article/article?id=', e, 'id')
+      const { id, layout } = e.currentTarget.dataset
+      wx.navigateTo({
+        url: `/pages/article/article?id=${id}&layout=${layout}`,
+      })
     }
   }
 })

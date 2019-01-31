@@ -1,2 +1,17 @@
-<!--pages/article/article.wxml-->
-<text>pages/article/article.wxml</text>
+<import src="/utils/wxParse/wxParse.wxml" />
+
+<view class="article-wrapper" wx:if="{{ layout==1 }}">
+  <text class='title'>{{ articleData.title }}</text>
+  <view class='info'>
+    <text class='author'>{{ articleData.author.name }}</text>
+    <text class='date'>{{ articleData.create_time }}</text>
+  </view>
+  <view class='main'>
+    <!-- <rich-text nodes="{{ articleData.content }}" space='emsp'></rich-text> -->
+    <template is="wxParse" data="{{ wxParseData: article.nodes }}" />
+    <view class='copyright'>
+      <text class='text'>©本文版权归 {{ articleData.author.name }} 所有, 任何形式转载请联系作者。</text>
+    </view>
+  </view>
+</view>
+<view wx:else>nihao</view>

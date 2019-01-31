@@ -2,6 +2,7 @@
 import regeneratorRuntime from '../../utils/runtime.js'
 import { getFn } from '../../utils/http.js'
 import { formatTime } from '../../utils/util.js'
+import api from '../../utils/apiUrl.js'
 
 Page({
 
@@ -18,12 +19,12 @@ Page({
    */
   onLoad: function (options) {
     this.getData()
-    // this.getComments()
   },
 
   // 获取数据
   getData: async function(date='') {
-    const url = 'https://m.douban.com/rexxar/api/v2/recommend_feed'
+    // const url = 'https://m.douban.com/rexxar/api/v2/recommend_feed'
+    const url = api()['recommend_feed']
     const params = {
       alt: 'json',
       udid: '9fcefbf2acf1dfc991054ac40ca5114be7cd092f',
@@ -47,15 +48,6 @@ Page({
       })
     }
     this.data.currentDate = response.data.date
-  },
-
-  // 获取评论
-  getComments: async function() {
-    const res = await getFn('https://m.douban.com/note/705333714/comments')
-    const html = res.data
-    const dataStr = html.substring(html.indexOf('TalionData.commentList = '), html.indexOf('TalionData.noteId = ')).split(' = ')[1]
-    const dataObj = JSON.parse(dataStr)
-    console.log(dataObj)
   },
 
   /**

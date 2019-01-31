@@ -1,18 +1,63 @@
 // pages/article/article.js
+import regeneratorRuntime from '../../utils/runtime.js'
+import { getFn } from '../../utils/http.js'
+import api from '../../utils/apiUrl.js'
+const wxParse = require('../../utils/wxParse/wxParse.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    articleData: {},
+    commentList: [],
+    layout: -1,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: async function (options) {
+    // console.log(options)
+    this.setData({
+      layout: options.layout
+    })
+    wx.showLoading({
+      title: 'loading...',
+    })
+    if (options.layout == 1) {
+      await this.getArticle(options.id)
+      await this.getComments(options.id)
+      wxParse.wxParse('article', 'html', this.data.articleData, this)
+    }
+    if (options.layout == 5) {
 
+    }
+    wx.hideLoading()
+  },
+
+  // 获取文章
+  getArticle: async function(id) {
+    const url = api(id)['article']
+    const res = await getFn(url)
+    this.setData({
+      articleData: {...res.data}
+    })
+    // console.log(res.data)
+  },
+
+  // 获取评论
+  getComments: async function (id) {
+    const url = api(id)['comments']
+    const res = await getFn(url)
+    const html = res.data
+    const dataStr = html.substring(html.indexOf('TalionData.commentList = '), html.indexOf('TalionData.noteId = ')).split(' = ')[1]
+    const dataObj = JSON.parse(dataStr)
+    this.setData({
+      commentList: [...dataObj]
+    })
+    // console.log(dataObj)
   },
 
   /**

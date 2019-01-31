@@ -18,7 +18,7 @@ Page({
    */
   onLoad: function (options) {
     this.getData()
-    this.getComments()
+    // this.getComments()
   },
 
   // 获取数据

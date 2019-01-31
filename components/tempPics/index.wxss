@@ -3,6 +3,7 @@
 }
 .pics-wrapper {
   display: flex;
+  margin-bottom: 10px;
 }
 .pics-wrapper > .left {
   flex: 2.8;

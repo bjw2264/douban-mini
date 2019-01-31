@@ -17,6 +17,13 @@ const formatTime = (date, showTime=false) => {
   return str
 }
 
+const navTo = (path, e, param) => {
+  wx.navigateTo({
+    url: `${path}${e.currentTarget.dataset[param]}`,
+  })
+}
+
 export {
-  formatTime
+  formatTime,
+  navTo
 }

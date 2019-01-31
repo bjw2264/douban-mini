@@ -1,4 +1,6 @@
 // components/tempText/index.js
+import { navTo } from '../../utils/util.js'
+
 Component({
   /**
    * 组件的属性列表
@@ -18,6 +20,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    goTo: function(e) {
+      navTo('/pages/article/article?id=', e, 'id')
+    }
   }
 })

@@ -14,4 +14,11 @@
     </view>
   </view>
 </view>
-<view wx:else>nihao</view>
+<view wx:else class='image-article-wrapper'>
+  <view class='item' wx:for="{{ imageList }}" wx:key="intex" wx:if="{{ index % 2 !== 0 }}">
+    <image src='{{ item }}' bin mode='widthFit'></image>
+  </view>
+  <view class='item' wx:for="{{ imageList }}" wx:key="intex" wx:if="{{ index % 2 === 0 }}">
+    <image src='{{ item }}' mode='widthFit'></image>
+  </view>
+</view>

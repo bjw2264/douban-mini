@@ -12,6 +12,7 @@ Page({
   data: {
     articleData: {},
     commentList: [],
+    imageList: [],
     layout: -1,
   },
 
@@ -32,7 +33,7 @@ Page({
       wxParse.wxParse('article', 'html', this.data.articleData, this)
     }
     if (options.layout == 5) {
-
+      await this.getImages(options.id)
     }
     wx.hideLoading()
   },
@@ -58,6 +59,25 @@ Page({
       commentList: [...dataObj]
     })
     // console.log(dataObj)
+  },
+
+  // 获取图片
+  getImages: async function(id) {
+    const url = api(id)['images']
+    const res = await getFn(url)
+    const imgReg = /<img.*?(?:>|\/>)/gi;
+    const srcReg = /src=[\'\"]?([^\'\"]*)[\'\"]?/i;
+    const imgArr = res.data.match(imgReg)
+    // console.log(imgArr)
+    const srcArr = []
+    if (imgArr.length) {
+      imgArr.forEach(str => srcArr.push(str.match(srcReg)[1]))
+    }
+    const dataArr = srcArr.filter(src => /p\d{10,}.jpg$/.test(src))
+    // console.log(dataArr)
+    this.setData({
+      imageList: dataArr
+    })
   },
 
   /**

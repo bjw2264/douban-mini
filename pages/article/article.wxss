@@ -1,3 +1,4 @@
+/* 图文文章 */
 @import '/utils/wxParse/wxParse.wxss';
 
 .article-wrapper {
@@ -33,6 +34,12 @@
   font-size: 18px;
   line-height: 1.7;
 }
+.main .wxParse-img {
+  width: 100% !important;
+}
+.main > .copyright {
+  margin-bottom: 10px;
+}
 .main > .copyright > .text {
   font-size: 15px;
   color: #aaa;
@@ -52,4 +59,20 @@
   position: absolute;
   left: 0;
   top: 0;
+}
+
+/* 图片文章 */
+.image-article-wrapper {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  column-count: 2;
+  column-gap: 20rpx;
+}
+.image-article-wrapper > .item {
+  /* flex: 50% 0 0; */
+  /* width: 50%; */
+  /* float: left; */
+}
+.image-article-wrapper > .item > image {
+  width: 100%;
 }

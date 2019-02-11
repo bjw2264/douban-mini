@@ -41,13 +41,28 @@ Page({
     wx.hideLoading()
     // console.log(response)
     const copyDataList = JSON.parse(JSON.stringify(this.data.dataList))
-    if (response.data.recommend_feeds.length) {
+    if (response.data.recommend_feeds.length && copyDataList.filter(v => !v._dateKey).length > 4) {
       this.setData({
-        dataList: [...copyDataList, ...response.data.recommend_feeds.map(v => ({...v, _date: response.data.date}))],
-        // currentDate: response.data.date,
+        dataList: [...copyDataList, { _dateKey: response.data.date }, ...response.data.recommend_feeds.map(v => ({...v, _date: response.data.date}))],
+        currentDate: response.data.date,
+      })
+    } else if (response.data.recommend_feeds.length && copyDataList.filter(v => !v._dateKey).length < 4) {
+      this.setData({
+        currentDate: response.data.date,
+        dataList: [...copyDataList, { _dateKey: response.data.date }, ...response.data.recommend_feeds.map(v => ({ ...v, _date: response.data.date }))]
+      }, () => {
+        this.onReachBottom()
+      })
+    } else {
+      // this.onReachBottom(response.data.date)
+      this.setData({
+        currentDate: response.data.date,
+        dataList: [...copyDataList, { _dateKey: response.data.date }]
+      }, () => {
+        this.onReachBottom()
       })
     }
-    this.data.currentDate = response.data.date
+    // this.data.currentDate = response.data.date
   },
 
   /**

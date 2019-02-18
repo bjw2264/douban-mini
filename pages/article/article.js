@@ -14,6 +14,8 @@ Page({
     commentList: [],
     imageList: [],
     layout: -1,
+    id: 0,
+    isMoreImg: true,
   },
 
   /**
@@ -22,7 +24,8 @@ Page({
   onLoad: async function (options) {
     // console.log(options)
     this.setData({
-      layout: options.layout
+      layout: options.layout,
+      id: options.id,
     })
     wx.showLoading({
       title: 'loading...',
@@ -61,22 +64,51 @@ Page({
     // console.log(dataObj)
   },
 
-  // 获取图片
-  getImages: async function(id) {
-    const url = api(id)['images']
-    const res = await getFn(url)
+  // 从html中提取图片url
+  _getImageSrc: function(html) {
     const imgReg = /<img.*?(?:>|\/>)/gi;
     const srcReg = /src=[\'\"]?([^\'\"]*)[\'\"]?/i;
-    const imgArr = res.data.match(imgReg)
+    const imgArr = html.match(imgReg)
     // console.log(imgArr)
     const srcArr = []
     if (imgArr.length) {
       imgArr.forEach(str => srcArr.push(str.match(srcReg)[1]))
     }
     const dataArr = srcArr.filter(src => /p\d{10,}.jpg$/.test(src))
-    // console.log(dataArr)
+    return dataArr
+  },
+
+  // 获取图片
+  getImages: async function(id) {
+    const url = api(id)['images']
+    const res = await getFn(url)
+    const dataArr = this._getImageSrc(res.data)
     this.setData({
-      imageList: dataArr
+      imageList: dataArr.filter(v => v.indexOf('sqs') === -1)
+    })
+  },
+
+  // 加载更多图片
+  getMoreImage: async function() {
+    const url = api()['moreImages']
+    const params = {
+      start: this.data.imageList.length,
+      id: this.data.id
+    }
+    wx.showLoading({
+      title: 'loading...'
+    })
+    const res = await getFn(url, params)
+    wx.hideLoading()
+    if (!res.data.more) {
+      this.setData({
+        isMoreImg: false
+      })
+      return
+    }
+    const dataArr = this._getImageSrc(res.data.html)
+    this.setData({
+      imageList: [...this.data.imageList, ...dataArr]
     })
   },
 
@@ -119,7 +151,8 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    // console.log(123)
+    this.data.isMoreImg && this.getMoreImage()
   },
 
   /**

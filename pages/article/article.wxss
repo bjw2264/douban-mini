@@ -63,15 +63,12 @@
 
 /* 图片文章 */
 .image-article-wrapper {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
+  padding: 0 18px;
   column-count: 2;
-  column-gap: 20rpx;
+  column-gap: 36rpx;
 }
 .image-article-wrapper > .item {
-  /* flex: 50% 0 0; */
-  /* width: 50%; */
-  /* float: left; */
+  margin: 40rpx 0;
 }
 .image-article-wrapper > .item > image {
   width: 100%;

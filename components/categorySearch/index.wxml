@@ -1,0 +1,4 @@
+<view class="category-search">
+  <text class='title' style='color:{{color}}'>{{ title }}</text>
+  <text class='desc'>{{ desc }}</text>
+</view> 

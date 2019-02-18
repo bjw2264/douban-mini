@@ -6,7 +6,8 @@ const api = (id='') => {
     article: `${baseUrl}/rexxar/api/v2/note/${id}`,
     comments: `${baseUrl}/note/${id}/comments`,
     images: `${baseUrl}/photos/album/${id}`,
-    moreImages: `${baseUrl}/j/fetch_photo/`
+    moreImages: `${baseUrl}/j/fetch_photo/`,
+    search: `${baseUrl}/search/`
   }
 }
 

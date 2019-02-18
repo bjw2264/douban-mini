@@ -1,0 +1,13 @@
+<view class="search-wrapper">
+  <view class='header'>
+    <text class='text' bindtap="goTo">搜索</text>
+    <view class='search-container {{ isShowSearchIcon ? "" : "hiddenIcon" }}'>
+      <input class='input' type='text' bindblur='onBlur' bindfocus='onFocus' bindconfirm='onConfirm'></input>
+    </view>
+  </view>
+  <view class='category-container'>
+    <view class='category-item' wx:for="{{ category }}" wx:key="{{ item.title }}">
+      <category-item title="{{ item.title }}" desc="{{ item.desc }}" color="{{ item.color }}" />
+    </view>
+  </view>
+</view>

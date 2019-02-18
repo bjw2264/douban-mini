@@ -152,7 +152,7 @@ function html2json(html, bindName, originData) {
                     imgUrl.splice(0, 1);
                 }
                 imgUrl = wxDiscode.urlToHttpUrl(imgUrl, __placeImgeUrlHttps);
-                node._data = originData.photos.find(v => v.tag_name == node.attr.id) 
+                node._data = originData.photos ? originData.photos.find(v => v.tag_name == node.attr.id) : {} 
                 node.attr.src = imgUrl;
                 node.from = bindName;
                 results.images.push(node);

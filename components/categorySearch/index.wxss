@@ -1,0 +1,17 @@
+/* components/categorySearch/index.wxss */
+.category-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+.desc {
+  color: #999;
+  height: 17px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}

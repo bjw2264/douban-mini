@@ -2,6 +2,7 @@
 import regeneratorRuntime from '../../utils/runtime.js'
 import api from '../../utils/apiUrl.js'
 import { getFn } from '../../utils/http.js'
+const wxParse = require('../../utils/wxParse/wxParse.js')
 const CATEGORY = [
   {
     title: '电影',
@@ -111,21 +112,23 @@ Page({
   },
 
   async onConfirm(e) {
-    // console.log(e)
-    // const value = e.detail.value
     const { value } = e.detail
     if (value !== '') {
       const url = api()['search']
       const params = {
-        query: encodeURIComponent(value),
+        query: value,
       }
       wx.showLoading({
         title: 'loading',
       })
       const res = await getFn(url, params)
+      wxParse.wxParse('result', 'html', {content: res.data}, this)
       wx.hideLoading()
     }
 
+  },
+  wxParseTagATap(e) {
+    console.log('-------wxparsetap', e)
   },
 
   /**

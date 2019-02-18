@@ -1,3 +1,5 @@
+@import '/utils/wxParse/wxParse.wxss';
+
 .header {
   display: flex;
   align-items: center;
@@ -65,4 +67,63 @@
 }
 .category-item:nth-of-type(n+4) {
   margin-top: 25px;
+}
+
+.wxParse-script, .wxParse-head, .wxParse-noscript, .wxParse-header {
+  display: none;
+}
+.wxParse-li .wxParse-li-text:first-of-type {
+  display: none;
+}
+.wxParse-li .wxParse-li-text:last-of-type {
+  overflow: hidden;
+}
+.wxParse-li .wxParse-li-text:last-of-type image {
+  width: 40px !important;
+}
+.search-results {
+  margin: 0;
+  padding: 0 18px;
+}
+.search-results > .search-module .search_results_subjects > view {
+  position: relative;
+}
+.search-results > .search-module .search_results_subjects > view::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  transform: scaleY(0.5);
+  background-color: #f3f3f3;
+}
+.wxParse-li-inner {
+  display: block;
+  width: 100%;
+}
+.search-results-modules-name {
+  font-size: 15px;
+  line-height: 15px;
+  color: #aaa;
+}
+.search-results-modules-more {
+  display: block;
+  color: #42bd56;
+  font-size: 15px;
+  padding: 10px 0 10px 50px;
+  position: relative;
+}
+.search-results-modules-more::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  transform: scaleY(0.5);
+  background-color: #f3f3f3;
+}
+.search_results_subjects {
+  margin: 0;
 }

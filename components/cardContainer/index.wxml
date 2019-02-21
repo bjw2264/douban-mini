@@ -1,0 +1,23 @@
+<wxs module="util">
+  function customObj(num) {
+    return {
+      text: num + ''
+    }
+  }
+  module.exports.obj = customObj
+</wxs>
+
+<view class='card-container-wrapper'>
+  <view class='title'>
+    <text>{{ title }}</text>
+  </view>
+  <scroll-view
+    scroll-x
+    scroll-with-animation
+    class='scroll-view-wrapper'
+  >
+    <view class='item' wx:for="{{ list }}" wx:key="{{ index }}" >
+      <card-item cover="{{ item.cover.url }}" name="{{ item.title }}" item="{{ util.obj(item.rating.value) }}" />
+    </view>
+  </scroll-view>
+</view>

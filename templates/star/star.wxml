@@ -1,0 +1,9 @@
+<wxs src="./star.wxs" module="star" />
+
+<template name="star">
+  <block wx:if="{{ !star.myIsNaN(star.myParseNum(item.text)) }}">
+    <view class='star-wrapper'>
+      <text wx:for="{{ star.starArr(star.myParseNum(item.text)) }}" class='star-item {{item}}' wx:key="{{index}}"></text>
+    </view>
+  </block>
+</template>

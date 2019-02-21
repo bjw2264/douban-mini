@@ -1,0 +1,26 @@
+function myParseNum(str) {
+  return Number(str)
+}
+function myIsNaN(num) {
+  return isNaN(num)
+}
+function starArr(score) {
+  var stars = Math.ceil(score) / 2
+  var hasDecimal = stars % 1 !== 0
+  var temp_arr = []
+  for (var i = 0; i < Math.floor(stars); i++) {
+    temp_arr.push('all-star')
+  }
+  if (hasDecimal) {
+    temp_arr.push('half-star')
+  }
+  while (temp_arr.length < 5) {
+    temp_arr.push('none-star')
+  }
+  return temp_arr
+}
+module.exports = {
+  myParseNum: myParseNum,
+  myIsNaN: myIsNaN,
+  starArr: starArr
+}

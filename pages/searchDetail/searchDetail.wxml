@@ -1,0 +1,5 @@
+<view class='search-detail-wrapper'>
+  <view class='item'><card-wrapper title="{{ first.subject_collection.name }}" list="{{ first.subject_collection_items }}" /></view>
+  <view class='item'><card-wrapper title="{{ second.subject_collection.name }}" list="{{ second.subject_collection_items }}" /></view>
+  <view class='item'><card-wrapper title="{{ three.subject_collection.name }}" list="{{ three.subject_collection_items }}" /></view>
+</view>

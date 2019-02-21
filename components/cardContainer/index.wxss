@@ -1,0 +1,18 @@
+.card-container-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 34rpx;
+  margin-bottom: 10px;
+  color: #111;
+}
+.scroll-view-wrapper {
+  white-space: nowrap;
+}
+.item {
+  display: inline-block;
+}
+.item:nth-of-type(n+2) {
+  margin-left: 8px;
+}

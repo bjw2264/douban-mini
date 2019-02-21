@@ -7,6 +7,8 @@ Component({
     color: String,
     title: String,
     desc: String,
+    openStatus: Boolean,
+    cat: String
   },
 
   /**
@@ -20,6 +22,19 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    goTo() {
+      if (this.data.openStatus) {
+        // console.log(123)
+        wx.navigateTo({
+          url: '/pages/searchDetail/searchDetail?cat='+this.data.cat,
+        })
+      } else {
+        wx.showToast({
+          title: '近期开放！',
+          image: '/images/tips.png',
+          duration: 600
+        })
+      }
+    }
   }
 })

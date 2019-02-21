@@ -1,0 +1,14 @@
+<import src="/templates/star/star.wxml" />
+
+<view class='card-wrapper'>
+  <view class='image-container'>
+    <image class='image' src='{{ cover }}'></image>
+  </view>
+  <view class='title'>
+    <text>{{ name }}</text>
+  </view>
+  <view class='rating'>
+    <template is="star" data="{{item}}" />
+    <text class='score'>{{ item.text }}</text>
+  </view>
+</view>

@@ -4,6 +4,7 @@
     "pages/article/article",
     "pages/search/search",
     "pages/searchResult/searchResult",
+    "pages/searchDetail/searchDetail",
     "pages/index/index",
     "pages/logs/logs"
   ],

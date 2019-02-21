@@ -8,7 +8,12 @@
   </view>
   <view class='category-container'>
     <view class='category-item' wx:for="{{ category }}" wx:key="{{ item.title }}">
-      <category-item title="{{ item.title }}" desc="{{ item.desc }}" color="{{ item.color }}" />
+      <category-item 
+        title="{{ item.title }}" 
+        desc="{{ item.desc }}" 
+        cat="{{ item.cat }}"
+        openStatus="{{ item.openStatus ? item.openStatus : false }}"
+        color="{{ item.color }}" />
     </view>
   </view>
 </view>

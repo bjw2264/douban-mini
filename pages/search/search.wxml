@@ -7,10 +7,10 @@
       <input class='input' type='text' bindblur='onBlur' bindfocus='onFocus' bindconfirm='onConfirm'></input>
     </view>
   </view>
-  <view class='category-container'>
+  <view class='category-container' wx:if="{{ !isShowResult }}">
     <view class='category-item' wx:for="{{ category }}" wx:key="{{ item.title }}">
       <category-item title="{{ item.title }}" desc="{{ item.desc }}" color="{{ item.color }}" />
     </view>
   </view>
-  <template is="wxParse" data="{{ wxParseData: result.nodes }}" />
+  <template wx:if="{{ isShowResult }}" is="wxParse" data="{{ wxParseData: result.nodes }}" />
 </view>

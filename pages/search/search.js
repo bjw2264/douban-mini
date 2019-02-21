@@ -75,6 +75,7 @@ Page({
     isShowSearchIcon: true,
     category: CATEGORY,
     // searchResult: '',
+    isShowResult: false,
   },
 
   /**
@@ -123,6 +124,9 @@ Page({
       })
       const res = await getFn(url, params)
       wxParse.wxParse('result', 'html', {content: res.data}, this)
+      this.setData({
+        isShowResult: true
+      })
       wx.hideLoading()
     }
 

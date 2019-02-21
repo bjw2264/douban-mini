@@ -85,7 +85,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer0" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse1" data="{{item}}" />
         </block>
@@ -170,7 +170,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer1" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse2" data="{{item}}" />
         </block>
@@ -247,7 +247,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer2" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse3" data="{{item}}" />
         </block>
@@ -323,7 +323,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer3" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse4" data="{{item}}" />
         </block>
@@ -399,7 +399,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer4" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse5" data="{{item}}" />
         </block>
@@ -475,7 +475,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer5" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse6" data="{{item}}" />
         </block>
@@ -551,7 +551,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer6" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse7" data="{{item}}" />
         </block>
@@ -626,7 +626,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer7" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse8" data="{{item}}" />
         </block>
@@ -702,7 +702,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer8" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse9" data="{{item}}" />
         </block>
@@ -778,7 +778,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer9" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse10" data="{{item}}" />
         </block>
@@ -854,7 +854,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer10" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse11" data="{{item}}" />
         </block>
@@ -930,7 +930,7 @@
 
     <!--a类型-->
     <block wx:elif="{{item.tag == 'a'}}">
-      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer11" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
           <template is="wxParse12" data="{{item}}" />
         </block>
@@ -964,4 +964,195 @@
     <template is="WxEmojiView" data="{{item}}" />
   </block>
 
+</template>
+
+<!--循环模版-->
+<template name="wxParse12">
+  <!--<template is="wxParse12" data="{{item}}" />-->
+  <!--判断是否是标签节点-->
+  <block wx:if="{{item.node == 'element'}}">
+    <block wx:if="{{item.tag == 'button'}}">
+      <button type="default" size="mini">
+        <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
+          <template is="wxParse13" data="{{item}}" />
+        </block>
+      </button>
+    </block>
+    <!--li类型-->
+    <block wx:elif="{{item.tag == 'li'}}">
+      <view class="{{item.classStr}} wxParse-li" style="{{item.styleStr}}">
+        <view class="{{item.classStr}} wxParse-li-inner">
+          <view class="{{item.classStr}} wxParse-li-text">
+            <view class="{{item.classStr}} wxParse-li-circle"></view>
+          </view>
+          <view class="{{item.classStr}} wxParse-li-text">
+            <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
+              <template is="wxParse13" data="{{item}}" />
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <!--video类型-->
+    <block wx:elif="{{item.tag == 'video'}}">
+      <template is="wxParseVideo" data="{{item}}" />
+    </block>
+
+    <!--img类型-->
+    <block wx:elif="{{item.tag == 'img'}}">
+      <template is="wxParseImg" data="{{item}}" />
+    </block>
+
+    <!--a类型-->
+    <block wx:elif="{{item.tag == 'a'}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer12" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+        <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
+          <template is="wxParse13" data="{{item}}" />
+        </block>
+      </view>
+    </block>
+
+    <block wx:elif="{{item.tag == 'br'}}">
+      <template is="WxParseBr"></template>
+    </block>
+    <!--其他块级标签-->
+    <block wx:elif="{{item.tagType == 'block'}}">
+      <view class="{{item.classStr}} wxParse-{{item.tag}}" style="{{item.styleStr}}">
+        <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
+          <template is="wxParse13" data="{{item}}" />
+        </block>
+      </view>
+    </block>
+
+    <!--内联标签-->
+    <view wx:else class="{{item.classStr}} wxParse-{{item.tag}} wxParse-{{item.tagType}}" style="{{item.styleStr}}">
+      <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
+        <template is="wxParse13" data="{{item}}" />
+      </block>
+    </view>
+
+  </block>
+
+  <!--判断是否是文本节点-->
+  <block wx:elif="{{item.node == 'text'}}">
+    <!--如果是，直接进行-->
+    <template is="WxEmojiView" data="{{item}}" />
+  </block>
+
+</template>
+
+<!--循环模版-->
+<template name="wxParse13">
+  <!--<template is="wxParse12" data="{{item}}" />-->
+  <!--判断是否是标签节点-->
+  <block wx:if="{{item.node == 'element'}}">
+    <block wx:if="{{item.tag == 'button'}}">
+      <button type="default" size="mini">
+        <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
+          <template is="wxParse14" data="{{item}}" />
+        </block>
+      </button>
+    </block>
+    <!--li类型-->
+    <block wx:elif="{{item.tag == 'li'}}">
+      <view class="{{item.classStr}} wxParse-li" style="{{item.styleStr}}">
+        <view class="{{item.classStr}} wxParse-li-inner">
+          <view class="{{item.classStr}} wxParse-li-text">
+            <view class="{{item.classStr}} wxParse-li-circle"></view>
+          </view>
+          <view class="{{item.classStr}} wxParse-li-text">
+            <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
+              <template is="wxParse14" data="{{item}}" />
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <!--video类型-->
+    <block wx:elif="{{item.tag == 'video'}}">
+      <template is="wxParseVideo" data="{{item}}" />
+    </block>
+
+    <!--img类型-->
+    <block wx:elif="{{item.tag == 'img'}}">
+      <template is="wxParseImg" data="{{item}}" />
+    </block>
+
+    <!--a类型-->
+    <block wx:elif="{{item.tag == 'a'}}">
+      <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} wxParse-{{item.tag}} layer13" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
+        <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
+          <template is="wxParse14" data="{{item}}" />
+        </block>
+      </view>
+    </block>
+
+    <block wx:elif="{{item.tag == 'br'}}">
+      <template is="WxParseBr"></template>
+    </block>
+    <!--其他块级标签-->
+    <block wx:elif="{{item.tagType == 'block'}}">
+      <view class="{{item.classStr}} wxParse-{{item.tag}}" style="{{item.styleStr}}">
+        <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
+          <template is="wxParse14" data="{{item}}" />
+        </block>
+      </view>
+    </block>
+
+    <!--内联标签-->
+    <view wx:else class="{{item.classStr}} wxParse-{{item.tag}} wxParse-{{item.tagType}}" style="{{item.styleStr}}">
+      <block wx:for="{{item.nodes}}" wx:for-item="item" wx:key="">
+        <template is="wxParse14" data="{{item}}" />
+      </block>
+    </view>
+
+  </block>
+
+  <!--判断是否是文本节点-->
+  <block wx:elif="{{item.node == 'text'}}">
+    <!--如果是，直接进行-->
+    <block wx:for="{{item.textArray}}" wx:key="">
+      <template is="star" data="{{item}}" />
+    </block>
+    <template is="WxEmojiView" data="{{item}}" />
+  </block>
+
+</template>
+
+<wxs module="star">
+  function myParseNum(str) {
+    return Number(str)
+  }
+  function myIsNaN(num) {
+    return isNaN(num)
+  }
+  function starArr(score) {
+    var stars = Math.ceil(score) / 2
+    var hasDecimal = stars % 1 !== 0
+    var temp_arr = []
+    for (var i = 0; i < Math.floor(stars); i++) {
+      temp_arr.push('all-star')
+    }
+    if (hasDecimal) {
+      temp_arr.push('half-star')
+    }
+    while(temp_arr.length < 5) {
+      temp_arr.push('none-star')
+    }
+    return temp_arr
+  }
+  module.exports = {
+    myParseNum: myParseNum,
+    myIsNaN: myIsNaN,
+    starArr: starArr
+  }
+</wxs>
+<template name="star">
+  <block wx:if="{{ !star.myIsNaN(star.myParseNum(item.text)) }}">
+    <view class='star-wrapper'>
+      <text wx:for="{{ star.starArr(star.myParseNum(item.text)) }}" class='star-item {{item}}' wx:key="{{index}}"></text>
+    </view>
+  </block>
 </template>

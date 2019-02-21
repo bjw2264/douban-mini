@@ -74,22 +74,19 @@ Page({
   data: {
     isShowSearchIcon: true,
     category: CATEGORY,
-    // searchResult: '',
-    isShowResult: false,
+    // inputVal: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   goTo: function() {
@@ -115,45 +112,28 @@ Page({
   async onConfirm(e) {
     const { value } = e.detail
     if (value !== '') {
-      const url = api()['search']
-      const params = {
-        query: value,
-      }
-      wx.showLoading({
-        title: 'loading',
+      wx.navigateTo({
+        url: `/pages/searchResult/searchResult?value=${value}`,
       })
-      const res = await getFn(url, params)
-      wxParse.wxParse('result', 'html', {content: res.data}, this)
-      this.setData({
-        isShowResult: true
-      })
-      wx.hideLoading()
     }
-
-  },
-  wxParseTagATap(e) {
-    console.log('-------wxparsetap', e)
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
   },
 
   /**

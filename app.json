@@ -3,6 +3,7 @@
     "pages/home/home",
     "pages/article/article",
     "pages/search/search",
+    "pages/searchResult/searchResult",
     "pages/index/index",
     "pages/logs/logs"
   ],
